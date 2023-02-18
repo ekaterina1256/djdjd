@@ -1,0 +1,238 @@
+/*
+* Background Images - Practice
+* CSS Styles
+* http://www.idg.net.ua/blog/uchebnik-css/ispolzovanie-css/praktika-background
+*
+*/
+
+
+/* General */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #eee;
+    background-color: #241d2d;
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.button,
+button {
+    border: 0;
+    background-image: linear-gradient(145deg, #dc83a2, #241d2d);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.button:hover,
+button:hover {
+    background-image: linear-gradient(145deg, #dc83a2, #241d2d);
+}
+
+
+
+/* Header */
+#topbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 999; /* подробно это свойство будет изучаться в поздних главах учебника,
+                   * а пока что просто добавьте его */
+}
+.menu li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+.menu li a {
+    padding: 20px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: rgb(220, 131, 162);
+}
+header {
+    min-height: 280px; /* также определим минимальную высоту хедера */
+    padding-top: 150px; /* и добавим отступы для содержимого */
+    padding-bottom: 50px;
+}
+header h1 {
+    font-family: 'Metal Mania', cursive; /* этот шрифт отличается от обычного */
+    text-align: center; /* выравниваем текст по центру */
+    font-size: 5.6em; /* задаем крупный размер шрифта */
+    color: #fafafa; /* устанавливаем слегка приглушенный белый цвет текста */
+    margin-top: 0; /* убираем верхний отступ конкретно для этого заголовка */
+}
+header .button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+/* Tour */
+.tour-card {
+    width: 220px;
+    height: 240px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    float: left;
+    box-sizing: border-box;
+    padding: 40px 10px 20px;
+    box-shadow: 0 3px 3px 0 #212121;
+}
+#tour:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.tour-town {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.tour-place {
+    margin-bottom: 10px;
+}
+.tour-date {
+    font-style: italic;
+    font-size: 0.9em;
+}
+.tour-card .button {
+    padding: 10px;
+    display: block;
+    max-width: 140px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tour-card.madrid {
+    background: url(../img/tour/300.jpg) center / cover no-repeat #ff3670;
+}
+.tour-card.turin {
+    background: url(../img/tour/300.jpg) center / cover no-repeat #666;
+}
+.tour-card.hamburg {
+    background: url(../img/tour/300.jpg) center / cover no-repeat #666;
+}
+.tour-card.krakow {
+    background: url(../img/tour/300.jpg) center / cover no-repeat #666;
+}
+
+
+
+
+
+/* Subscribe */
+#subscribe {
+    background: url(../img/bg-02.jpg) center / cover no-repeat #666;
+    background-blend-mode: multiply;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin-top: 40px;
+    text-align: center;
+}
+#subscribe .pitch {
+    margin-bottom: 20px;
+}
+#subscribe input {
+    border: 0;
+    height: 40px;
+    background-color: #fafafa;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+}
+#subscribe button {
+    margin: 0;
+    height: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#subscribe .pitch p {
+    line-height: 1.6;
+}
+
+/* а этот — в теле медиазапроса для max-width: 480px */
+
+#subscribe button {
+    width: 232px;
+    margin-top: 20px;
+}
+
+
+/* Footer */
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #241d2d;
+    background-image: url(../img/bg.png);
+    text-align: center;
+}
+footer .social {
+    margin-bottom: 20px;
+}
+footer .social a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer .social a:hover {
+    color: rgb(220, 131, 162);
+}
+footer .copyright {
+    font-size: 0.8em;
+}
+@media (max-width: 980px) {
+    .tour-card {
+        float: none;
+        display: inline-block;
+    }
+    #tour {
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .menu li a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .menu {
+        text-align: center; /* центрируем меню — так смотрится лучше */
+    }
+}
+
